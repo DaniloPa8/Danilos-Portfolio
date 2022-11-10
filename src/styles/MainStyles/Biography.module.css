@@ -1,0 +1,411 @@
+/* DarkTheme */
+
+.biography {
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+  transition: opacity 3s ease;
+  opacity: 0;
+}
+.biography:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.biography:hover > .title {
+  color: gold;
+}
+.topAnchor {
+  position: relative;
+  top: -8vw;
+}
+.title {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  transition: 1s color;
+}
+.spacer {
+  border-top: 0.22vw groove white;
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.leftSide {
+  width: 30%;
+  height: 100%;
+  padding: 1vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  border-radius: 5rem;
+  margin: auto;
+  transition: ease 2s;
+}
+.profileImage {
+  width: 20vw;
+  height: 20vw;
+  align-self: center;
+  border-radius: 0.2vw;
+  box-shadow: 0.6vw 1.2vw rgba(0, 4, 255, 0.2);
+
+  transition: ease-in 2s;
+}
+.profileImage:hover {
+  box-shadow: 0.3vw 0.6vw rgba(0, 4, 255, 0.5);
+  box-shadow: 1.2vw 1.6vw rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+.rightSide {
+  width: 70%;
+  align-self: center;
+}
+
+.hover {
+  font-size: 1.3vw;
+  position: relative;
+  left: 0vw;
+  bottom: 2vw;
+  text-align: center;
+  color: white;
+}
+.p1,
+.p2,
+.p3,
+.p4 {
+  font-size: 0.8vw;
+  font-weight: 700;
+  width: 25vw;
+  padding: 1vw;
+  margin: 1vw;
+  border: solid white 0.2vw;
+  box-shadow: 0.5vw 1vw rgba(0, 0, 255, 0.614);
+  background-color: rgba(0, 0, 0, 0.304);
+}
+.textArea:hover .p1 {
+  background-color: transparent;
+}
+.textArea:hover .p2 {
+  background-color: transparent;
+}
+.textArea:hover .p3 {
+  background-color: transparent;
+}
+.textArea:hover .p4 {
+  background-color: transparent;
+}
+.p1 {
+  justify-self: right;
+  align-self: flex-end;
+  box-shadow: -0.3vw -0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+}
+.p1:hover {
+  box-shadow: -0.3vw -0.5vw gold;
+  transition: 1s ease;
+}
+.p2 {
+  height: 11vw;
+  box-shadow: 0.3vw -0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+  align-self: flex-end;
+}
+.p2:hover {
+  box-shadow: 0.3vw -0.5vw gold;
+  transition: 1s ease;
+}
+.p3 {
+  width: 12vw;
+  height: 13vw;
+  justify-self: right;
+  box-shadow: -0.3vw 0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+}
+.p3:hover {
+  box-shadow: -0.3vw 0.5vw gold;
+  transition: 1s ease;
+}
+.p4 {
+  width: 16vw;
+  box-shadow: 0.3vw 0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+}
+.p4:hover {
+  box-shadow: 0.3vw 0.5vw gold;
+  transition: 1s ease;
+}
+.textArea {
+  width: 100%;
+  text-align: justify;
+  font-size: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.7fr 1fr;
+  --b: 0.1vw;
+  --c: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.05);
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, rgb(17, 2, 2) 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      no-repeat;
+
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear,
+    background-size 0.3s calc(0.3s - var(--_s, 0s));
+  z-index: 99;
+}
+.textArea:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+}
+
+.hoverText {
+  opacity: 1;
+  display: inline;
+}
+.clickText {
+  opacity: 0;
+  display: none;
+}
+
+/* WhiteTheme */
+.biographyWhite {
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+  transition: opacity 3s ease;
+  opacity: 0;
+}
+.biographyWhite:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.titleWhite {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  transition: 1s color;
+}
+.profileImageWhite {
+  width: 20vw;
+  height: 20vw;
+  align-self: center;
+  border-radius: 0.2vw;
+  box-shadow: 0.6vw 1.2vw rgba(0, 4, 255, 0.8);
+
+  transition: ease-in 2s;
+}
+.profileImageWhite:hover {
+  box-shadow: 0.3vw 0.6vw rgba(0, 4, 255, 0.5);
+  box-shadow: 1.2vw 1.6vw rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+
+.biographyWhite:hover .titleWhite {
+  color: rgb(21, 0, 255);
+}
+
+.spacerWhite {
+  border-top: 0.22vw groove rgb(0, 0, 0);
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+.hoverWhite {
+  font-size: 1.3vw;
+  position: relative;
+  left: 0vw;
+  bottom: 2vw;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.hoverTextWhite {
+  opacity: 1;
+  display: inline;
+  color: rgb(0, 0, 0);
+}
+
+.textAreaWhite {
+  width: 100%;
+  text-align: justify;
+  font-size: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.7fr 1fr;
+  --b: 0.1vw;
+  --c: rgb(0, 0, 0);
+  color: rgba(0, 137, 249, 0.01);
+  padding-block: var(--b);
+  background: linear-gradient(var(--c) 50%, rgba(255, 255, 255, 0.01) 0) 0%
+      calc(100% - var(--_p, 0%)) / 100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
+      no-repeat;
+
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s var(--_s, 0s) linear,
+    background-size 0.3s calc(0.3s - var(--_s, 0s));
+  z-index: 99;
+}
+.textAreaWhite:hover {
+  --_p: 100%;
+  --_s: 0.3s;
+}
+.p1White,
+.p2White,
+.p3White,
+.p4White {
+  font-size: 0.8vw;
+  font-weight: 700;
+  width: 25vw;
+  padding: 1vw;
+  margin: 1vw;
+  border: solid rgb(0, 0, 0) 0.2vw;
+  box-shadow: 0.5vw 1vw rgba(0, 0, 255, 0.614);
+  background-color: rgba(0, 0, 0, 0.304);
+}
+.textAreaWhite:hover .p1White {
+  background-color: transparent;
+}
+.textAreaWhite:hover .p2White {
+  background-color: transparent;
+}
+.textAreaWhite:hover .p3White {
+  background-color: transparent;
+}
+.textAreaWhite:hover .p4White {
+  background-color: transparent;
+}
+.p1White {
+  justify-self: right;
+  align-self: flex-end;
+  box-shadow: -0.3vw -0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+}
+.p1White:hover {
+  box-shadow: -0.3vw -0.5vw rgba(0, 0, 255, 1);
+  transition: 1s ease;
+}
+.p2White {
+  height: 11vw;
+  box-shadow: 0.3vw -0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+  align-self: flex-end;
+}
+.p2White:hover {
+  box-shadow: 0.3vw -0.5vw rgba(0, 0, 255, 1);
+  transition: 1s ease;
+}
+.p3White {
+  width: 12vw;
+  height: 13vw;
+  justify-self: right;
+  box-shadow: -0.3vw 0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+}
+.p3White:hover {
+  box-shadow: -0.3vw 0.5vw rgba(0, 0, 255, 1);
+  transition: 1s ease;
+}
+.p4White {
+  width: 16vw;
+  box-shadow: 0.3vw 0.5vw rgba(0, 0, 255, 0.614);
+  transition: 1s ease;
+}
+.p4White:hover {
+  box-shadow: 0.3vw 0.5vw rgba(0, 0, 255, 1);
+  transition: 1s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .textArea,
+  .textAreaWhite {
+    font-size: 2.5vw;
+    height: 175vw;
+  }
+  .biography,
+  .biographyWhite {
+    border-radius: 4vw;
+    margin-left: 1vw;
+    margin-top: 18vw;
+    width: 98vw;
+    height: 200vw;
+  }
+  .hoverText,
+  .hoverTextWhite {
+    opacity: 0;
+    display: none;
+  }
+  .p1,
+  .p1White,
+  .p2,
+  .p2White,
+  .p3,
+  .p3White,
+  .p4,
+  .p4White {
+    font-size: 2.2vw;
+    text-align: center;
+  }
+  .p1,
+  .p1White {
+    box-shadow: -1vw -1.5vw rgba(0, 0, 255, 0.614);
+    height: 86vw;
+  }
+
+  .p2,
+  .p2White {
+    align-self: flex-end;
+    height: 78vw;
+    box-shadow: 1vw -1.5vw rgba(0, 0, 255, 0.614);
+  }
+  .p3,
+  .p3White {
+    height: 45vw;
+    width: 24vw;
+    box-shadow: -1vw 1.5vw rgba(0, 0, 255, 0.614);
+  }
+  .p4,
+  .p4White {
+    width: 24vw;
+    height: 56vw;
+    box-shadow: 1vw 1.5vw rgba(0, 0, 255, 0.614);
+  }
+  .profileImage,
+  .profileImageWhite {
+    width: 30vw;
+    height: 30vw;
+    box-shadow: 1vw 1.5vw rgba(0, 0, 255, 0.614);
+  }
+  .clickText {
+    opacity: 1;
+    display: inline;
+  }
+  .hover,
+  .hoverWhite {
+    font-size: 3vw;
+  }
+  .title,
+  .titleWhite {
+    font-size: 5vw;
+    top: -3vw;
+  }
+  .spacer {
+    top: 3.1vw;
+    border-top: 0.5vw solid white;
+  }
+  .spacerWhite {
+    top: 3.1vw;
+    border-top: 0.5vw solid black;
+  }
+  .topAnchor {
+    top: -20vw;
+  }
+}

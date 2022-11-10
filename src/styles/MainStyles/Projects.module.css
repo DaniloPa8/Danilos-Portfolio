@@ -1,0 +1,228 @@
+/* DarkTheme */
+.projects {
+  height: 65vh;
+  margin-bottom: 5vw;
+  font-size: 1vw;
+  transition: opacity 3s ease;
+  opacity: 0;
+}
+.projectsAnchor {
+  position: relative;
+  bottom: 10vw;
+}
+.projects:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.projects:hover > .title {
+  color: gold;
+}
+.title {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  transition: 1s color;
+}
+.spacer {
+  border-top: 0.22vw groove white;
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+.heading {
+  height: 5vw;
+  width: 60%;
+  margin: auto;
+  padding: 1%;
+  border-top: 0.1vw solid white;
+  border-left: 0.1vw solid white;
+  border-bottom: 0.3vw solid white;
+  border-right: 0.3vw solid white;
+  border-top-right-radius: 0.4vw;
+  border-bottom-left-radius: 0.4vw;
+  transition: 1s;
+  font-size: 1vw;
+}
+.heading:hover {
+  border-bottom: 0.3vw solid gold;
+  border-right: 0.3vw solid gold;
+  transition: 1s;
+  transform: scale(1.1);
+}
+.projectsList {
+  justify-content: center;
+  align-content: center;
+}
+.firstProject {
+  margin: auto;
+  margin-top: 3vw;
+  font-size: 1.5vw;
+  width: 25%;
+  transition: 1s ease-in;
+}
+
+.firstProject:hover {
+  transform: scale(1.1);
+  font-size: 1.5vw;
+}
+.firstProject:hover .firstProjectImage {
+  border: 0.2vw solid gold;
+  transition: 1s;
+}
+.firstProject p {
+  transition: 1s;
+}
+.firstProject:hover p {
+  color: gold;
+  transition: 1s;
+}
+.firstProjectImage {
+  width: 20vw;
+  height: 10vw;
+  border: 0.2vw solid white;
+  transition: 1s;
+}
+
+/* WhiteTheme */
+.projectsWhite {
+  height: 65vh;
+  margin-bottom: 5vw;
+  font-size: 1vw;
+  transition: opacity 3s ease;
+  opacity: 0;
+}
+.projectsWhite:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.projectsWhite:hover .titleWhite {
+  color: rgb(21, 0, 255);
+}
+
+.spacerWhite {
+  border-top: 0.22vw groove rgb(0, 0, 0);
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+.titleWhite {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  color: rgb(0, 0, 0);
+  transition: 1s color;
+}
+.headingWhite {
+  height: 5vw;
+  width: 60%;
+  margin: auto;
+  padding: 1%;
+  border-top: 0.1vw solid rgb(0, 0, 0);
+  border-left: 0.1vw solid rgb(0, 0, 0);
+  border-bottom: 0.3vw solid rgb(0, 0, 0);
+  border-right: 0.3vw solid rgb(0, 0, 0);
+  border-top-right-radius: 0.4vw;
+  border-bottom-left-radius: 0.4vw;
+  transition: 1s;
+  font-size: 1vw;
+}
+.headingWhite:hover {
+  border-bottom: 0.3vw solid rgb(21, 0, 255);
+  border-right: 0.3vw solid rgb(21, 0, 255);
+  transition: 1s;
+  transform: scale(1.1);
+}
+.firstProjectWhite {
+  margin: auto;
+  margin-top: 3vw;
+  font-size: 1.5vw;
+  width: 25%;
+  transition: 1s ease-in;
+}
+.firstProjectWhite:hover {
+  transform: scale(1.1);
+  font-size: 1.5vw;
+}
+.firstProjectWhite:hover .firstProjectImageWhite {
+  border: 0.2vw solid rgb(21, 0, 255);
+  transition: 1s;
+}
+.firstProjectImageWhite {
+  width: 20vw;
+  height: 10vw;
+  border: 0.2vw solid rgb(0, 0, 0);
+  transition: 1s;
+}
+
+@media screen and (max-width: 800px) {
+  .projects,
+  .projectsWhite {
+    height: 100vw;
+    margin-left: 1vw;
+    width: 98vw;
+  }
+
+  .title,
+  .titleWhite {
+    font-size: 5vw;
+    top: -3vw;
+  }
+  .spacer {
+    top: 3.1vw;
+    border-top: 0.5vw solid white;
+  }
+  .spacerWhite {
+    top: 3.1vw;
+    border-top: 0.5vw solid black;
+  }
+  .heading {
+    font-size: 2.5vw;
+    height: 16vw;
+    width: 80vw;
+    border-top: 0.2vw solid white;
+    border-left: 0.2vw solid white;
+    border-bottom: 0.9vw solid white;
+    border-right: 0.9vw solid white;
+  }
+  .heading:hover {
+    border-bottom: 1vw solid gold;
+    border-right: 1vw solid gold;
+    border-top: 0.3vw solid gold;
+    border-left: 0.3vw solid gold;
+  }
+  .headingWhite {
+    font-size: 2.5vw;
+    height: 16vw;
+    width: 80vw;
+    border-top: 0.2vw solid rgb(0, 0, 0);
+    border-left: 0.2vw solid rgb(0, 0, 0);
+    border-bottom: 0.9vw solid rgb(0, 0, 0);
+    border-right: 0.9vw solid rgb(0, 0, 0);
+  }
+  .headingWhite:hover {
+    border-bottom: 1vw solid rgb(21, 0, 255);
+    border-right: 1vw solid rgb(21, 0, 255);
+    border-top: 0.3vw solid rgb(21, 0, 255);
+    border-left: 0.3vw solid rgb(21, 0, 255);
+  }
+  .firstProject,
+  .firstProjectWhite {
+    justify-self: center;
+    width: 50%;
+    margin-top: 10vw;
+  }
+  .firstProjectImage,
+  .firstProjectImageWhite {
+    height: 30vw;
+    width: 50vw;
+  }
+  .firstProject p,
+  .firstProjectWhite p {
+    align-self: center;
+    font-size: 4vw;
+  }
+}

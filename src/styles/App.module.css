@@ -1,0 +1,249 @@
+/* General styles */
+
+.App {
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+  transition: ease-in 2s;
+}
+.AppLight {
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+  margin: 0;
+  font-weight: 600;
+
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: "Quantico", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  -webkit-overflow-y: scroll;
+  -moz-overflow-y: scroll;
+  -o-overflow-y: scroll;
+  overflow-y: scroll;
+  height: max-content;
+}
+
+.bodyLight {
+  background-color: rgba(153, 153, 153, 0.373);
+  opacity: 1;
+  background-image: linear-gradient(
+      30deg,
+      #cfcfcf 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #cfcfcf 87.5%,
+      #cfcfcf
+    ),
+    linear-gradient(
+      150deg,
+      #cfcfcf 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #cfcfcf 87.5%,
+      #cfcfcf
+    ),
+    linear-gradient(
+      30deg,
+      #cfcfcf 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #cfcfcf 87.5%,
+      #cfcfcf
+    ),
+    linear-gradient(
+      150deg,
+      #cfcfcf 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #cfcfcf 87.5%,
+      #cfcfcf
+    ),
+    linear-gradient(
+      60deg,
+      #cfcfcf77 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #cfcfcf77 75%,
+      #cfcfcf77
+    ),
+    linear-gradient(
+      60deg,
+      #cfcfcf77 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #cfcfcf77 75%,
+      #cfcfcf77
+    );
+  background-size: 20px 35px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+}
+
+.bodyDark {
+  background-color: #000000;
+  opacity: 0.9;
+  background-image: linear-gradient(
+      30deg,
+      #131313 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #131313 87.5%,
+      #131313
+    ),
+    linear-gradient(
+      150deg,
+      #131313 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #131313 87.5%,
+      #131313
+    ),
+    linear-gradient(
+      30deg,
+      #131313 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #131313 87.5%,
+      #131313
+    ),
+    linear-gradient(
+      150deg,
+      #131313 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #131313 87.5%,
+      #131313
+    ),
+    linear-gradient(
+      60deg,
+      #13131377 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #13131377 75%,
+      #13131377
+    ),
+    linear-gradient(
+      60deg,
+      #13131377 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #13131377 75%,
+      #13131377
+    );
+  background-size: 20px 35px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+}
+
+/* SCOLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(25, 0, 255, 0.7);
+
+  margin: 2vw;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(21, 0, 255);
+}
+.themeSwitch {
+  font-size: 5vw;
+  position: fixed;
+  top: 20vw;
+  left: -2.5vw;
+  width: 5vw;
+  height: 5.5vw;
+  background-color: black;
+  border: groove white 0.2vw;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  padding: 0.3vw;
+  padding-left: 1.5vw;
+  transition: 1s ease;
+  z-index: 99;
+}
+.themeSwitch:hover {
+  transform: scale(1.1);
+  color: gold;
+}
+.themeSwitchWhite {
+  font-size: 5vw;
+  position: fixed;
+  top: 20vw;
+  left: -2.5vw;
+  width: 5vw;
+  height: 5.5vw;
+  background-color: rgb(255, 255, 255);
+  border: groove rgb(0, 0, 0) 0.2vw;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  padding: 0.2vw;
+  padding-left: 1.5vw;
+  transition: 1s ease;
+  z-index: 99;
+}
+.themeSwitchWhite:hover {
+  transform: scale(1.1);
+  color: rgb(21, 0, 255);
+}
+
+@media screen and (max-width: 1000px) {
+  .App,
+  .AppLight {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  html {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .themeSwitch,
+  .themeSwitchWhite {
+    width: 11.5vw;
+    height: 11.5vw;
+    font-size: 12vw;
+  }
+  /* SCOLLBAR */
+  ::-webkit-scrollbar {
+    width: 1vw;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(25, 0, 255, 0.7);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(21, 0, 255);
+  }
+}

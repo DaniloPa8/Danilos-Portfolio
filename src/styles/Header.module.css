@@ -1,0 +1,414 @@
+/* BlackTheme */
+.header {
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  border-bottom: solid 0.2rem white;
+
+  width: 100%;
+  height: 6.5vw;
+  position: fixed;
+  top: 0;
+  background-color: rgb(0, 0, 0);
+  z-index: 20;
+  transition: ease-in 2s;
+}
+.header:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top: 3vw solid transparent;
+  border-right: 3vw solid white;
+  width: 0;
+  z-index: 20;
+}
+.header:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 3vw solid transparent;
+  border-left: 3vw solid white;
+  width: 0;
+  z-index: 20;
+}
+
+.myName {
+  width: 25%;
+  margin-top: 1vw;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  word-spacing: 0.2vw;
+}
+.myName:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 3vw solid transparent;
+  border-left: 3vw solid white;
+  width: 0;
+  z-index: 20;
+}
+.myName:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom: 3vw solid transparent;
+  border-right: 3vw solid white;
+  width: 0;
+  z-index: 20;
+}
+.nameText {
+  font-size: 2.2vw;
+  margin-top: 0.5vw;
+  transition: 1s;
+}
+
+.proffesion {
+  font-size: 1.4vw;
+  position: relative;
+  left: 4vw;
+  bottom: 1.8vw;
+  color: rgba(255, 227, 68, 0.861);
+  font-weight: 400;
+}
+.biography,
+.skills,
+.projects,
+.education,
+.contact {
+  font-size: 1.5vw;
+  width: 10%;
+  align-self: center;
+  padding: 0.4vw;
+  margin: 0.4vw;
+  cursor: default;
+}
+.biography p,
+.skills p,
+.projects p,
+.education p,
+.contact p,
+.backToTopAnimated p,
+.backToTopNon p {
+  margin: 0;
+}
+.biography:hover,
+.skills:hover,
+.projects:hover,
+.education:hover,
+.contact:hover,
+.backToTopAnimated:hover {
+  background-color: rgba(34, 38, 255, 0.5);
+  transition: 0.1s;
+  --g: #0000 98%, #000;
+  --r: 0.5vw;
+  mask: radial-gradient(var(--r) at 0 0, var(--g)) 0 0,
+    radial-gradient(var(--r) at 100% 0, var(--g)) 100% 0,
+    radial-gradient(var(--r) at 0 100%, var(--g)) 0 100%,
+    radial-gradient(var(--r) at 100% 100%, var(--g)) 100% 100%;
+  mask-size: 51% 51%;
+  mask-repeat: no-repeat;
+}
+
+.backToTopAnimated {
+  font-size: 1.5vw;
+  width: 10%;
+  opacity: 1;
+  align-self: center;
+  padding: 0.4vw;
+  margin: 0.4vw;
+  transition: linear 0.5s;
+  cursor: default;
+}
+.backToTopNon {
+  font-size: 1.5vw;
+  width: 10%;
+  opacity: 0;
+  align-self: center;
+  padding: 0.4vw;
+  margin: 0.4vw;
+  transition: linear 0.5s;
+  cursor: default;
+}
+
+.biography {
+  margin-left: 2.5vw;
+}
+.hamburgerDiv {
+  display: none;
+}
+.dropdownListOut {
+  display: none;
+}
+.dropdownListOutWhite {
+  display: none;
+}
+
+/* WhiteTheme */
+
+.whiteHeader {
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  border-bottom: solid 0.2rem rgb(0, 0, 0);
+
+  width: 100%;
+  height: 6.5vw;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 20;
+  transition: ease-in 2s;
+}
+.whiteHeader:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top: 3vw solid transparent;
+  border-right: 3vw solid rgb(0, 0, 0);
+  width: 0;
+  z-index: 20;
+}
+.whiteHeader:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 3vw solid transparent;
+  border-left: 3vw solid rgb(0, 0, 0);
+  width: 0;
+  z-index: 20;
+}
+.myNameWhite {
+  width: 25%;
+  margin-top: 1vw;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  word-spacing: 0.2vw;
+}
+.myNameWhite:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 3vw solid transparent;
+  border-left: 3vw solid rgb(0, 0, 0);
+  width: 0;
+  z-index: 20;
+}
+.myNameWhite:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom: 3vw solid transparent;
+  border-right: 3vw solid rgb(0, 0, 0);
+  width: 0;
+  z-index: 20;
+}
+.whiteProffesion {
+  font-size: 1.4vw;
+  position: relative;
+  left: 4vw;
+  bottom: 1.8vw;
+  color: rgb(255, 196, 0);
+  font-weight: 400;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 800px) {
+  .header,
+  .whiteHeader {
+    height: 12vw;
+    width: 100vw;
+    font-size: 10vw;
+  }
+  .myName,
+  .myNameWhite {
+    width: 40%;
+  }
+  .nameText {
+    margin-top: 1vw;
+    margin-left: 2vw;
+    width: 50vw;
+    font-size: 4.5vw;
+  }
+  .proffesion,
+  .whiteProffesion {
+    font-size: 3.2vw;
+    width: 50vw;
+    top: -3vw;
+    margin-left: 8vw;
+    font-weight: 540;
+  }
+  .hamburgerDiv {
+    display: block;
+    position: absolute;
+    right: 4vw;
+    top: 1vw;
+    font-size: 8vw;
+    transition: 500ms color;
+  }
+  .hamburgerOpen {
+    display: block;
+    position: absolute;
+    right: 4vw;
+    top: 1vw;
+    font-size: 8vw;
+    color: gold;
+    transition: 500ms color ease;
+  }
+  .backToTopAnimated {
+    position: absolute;
+    right: 14vw;
+    font-size: 3vw;
+    width: 20%;
+  }
+  .backToTopNon {
+    position: absolute;
+    right: 14vw;
+    font-size: 3vw;
+    width: 20%;
+  }
+  .biography,
+  .skills,
+  .projects,
+  .education,
+  .contact {
+    display: none;
+  }
+  .dropdownContainer {
+    text-align: center;
+    opacity: 1;
+    transition: opacity 500ms;
+  }
+  .dropdownContainerFadeOut {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  .dropdownList {
+    background-color: black;
+    border: groove 0.6vw white;
+    border-radius: 2vw;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    right: 2vw;
+    top: 7vw;
+    font-size: 4vw;
+    display: inline-block;
+    width: 25%;
+    padding: 0;
+    text-align: center;
+    animation: growDown 500ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  .dropdownListOut {
+    background-color: black;
+    border: groove 0.6vw white;
+    border-radius: 2vw;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    right: 2vw;
+    top: 7vw;
+    font-size: 4vw;
+    display: inline-block;
+    width: 25%;
+    padding: 0;
+    text-align: center;
+    animation: fadeOut 500ms ease-in-out;
+  }
+  .dropdownList li {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  .dropdownListOut li {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  .dropdownList li :active {
+    transition: 1s color;
+    color: gold;
+  }
+  .dropdownListWhite {
+    background-color: rgb(255, 255, 255);
+    border: groove 0.6vw rgb(0, 0, 0);
+    border-radius: 2vw;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    right: 2vw;
+    top: 7vw;
+    font-size: 4vw;
+    display: inline-block;
+    width: 25%;
+    padding: 0;
+    text-align: center;
+    animation: growDown 500ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  .dropdownListOutWhite {
+    background-color: rgb(255, 255, 255);
+    border: groove 0.6vw rgb(0, 0, 0);
+    border-radius: 2vw;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    right: 2vw;
+    top: 7vw;
+    font-size: 4vw;
+    display: inline-block;
+    width: 25%;
+    padding: 0;
+    text-align: center;
+    animation: fadeOut 500ms ease-in-out;
+  }
+  .dropdownListWhite li {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  .dropdownListOutWhite li {
+    width: 100%;
+    padding: 2vw 0;
+  }
+  .dropdownListWhite li :active {
+    transition: 1s color;
+    color: gold;
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,223 @@
+/* DarkTheme */
+.skills {
+  height: auto;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+.skills:hover > .title {
+  color: gold;
+}
+.title {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  transition: 1s color;
+}
+.spacer {
+  border-top: 0.22vw groove white;
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+.skillsAnchor {
+  position: relative;
+  bottom: 8vw;
+}
+.skills:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.skillsAnchor {
+  position: relative;
+  top: -20%;
+}
+.content {
+  display: flex;
+  width: 100%;
+  margin-top: -2vw;
+}
+.heading {
+  font-style: bold;
+  width: 30%;
+  float: left;
+  align-self: center;
+  height: 100%;
+  font-size: 1vw;
+  padding: 2.5%;
+  margin-left: 2%;
+  text-align: justify;
+  border-top: 0.1vw solid white;
+  border-left: 0.1vw solid white;
+  border-bottom: 0.3vw solid white;
+  border-right: 0.3vw solid white;
+  border-top-right-radius: 0.4vw;
+  border-bottom-left-radius: 0.4vw;
+  transition: 1s;
+}
+.heading:hover {
+  border-bottom: 0.3vw solid gold;
+  border-right: 0.3vw solid gold;
+  transition: 1s;
+}
+
+.iconContainer {
+  padding: 10%;
+  border: 0.25vw solid rgb(210, 210, 210);
+  margin: 5%;
+  margin-bottom: 40%;
+  border-bottom-left-radius: 20vh;
+  border-bottom-right-radius: 20vh;
+  border-top-left-radius: 5vh;
+  border-top-right-radius: 5vh;
+  transition: 2s background ease-out;
+  box-shadow: 0vw 0.6vw white;
+}
+.iconContainer:hover {
+  transition: 0.3s background ease-out;
+  background-color: rgba(0, 4, 255, 0.407);
+  box-shadow: 0vw 0.6vw rgba(0, 4, 255, 0.407);
+}
+.icons {
+  font-size: 4vw;
+  width: 68%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  padding: 5%;
+  transition: 1s ease-out;
+}
+.icons:hover {
+  transform: scale(1.05);
+  transition: 1s ease-out;
+}
+.icons p {
+  font-size: 1.2vw;
+  margin-top: -2%;
+}
+
+/* WhiteTheme */
+.spacerWhite {
+  border-top: 0.22vw groove rgb(0, 0, 0);
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+.titleWhite {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  color: rgb(21, 0, 255);
+  transition: 1s color;
+}
+.headingWhite {
+  font-style: bold;
+  width: 30%;
+  float: left;
+  align-self: center;
+  height: 100%;
+  font-size: 1vw;
+  padding: 2.5%;
+  margin-left: 2%;
+  text-align: justify;
+  border-top: 0.1vw solid rgb(0, 0, 0);
+  border-left: 0.1vw solid rgb(0, 0, 0);
+  border-bottom: 0.3vw solid rgb(0, 0, 0);
+  border-right: 0.3vw solid rgb(0, 0, 0);
+  border-top-right-radius: 0.4vw;
+  border-bottom-left-radius: 0.4vw;
+  transition: 1s;
+}
+.headingWhite:hover {
+  border-bottom: 0.3vw solid rgb(21, 0, 255);
+  border-right: 0.3vw solid rgb(21, 0, 255);
+  transition: 1s;
+}
+.iconContainerWhite {
+  padding: 10%;
+  border: 0.25vw solid rgb(0, 0, 0);
+  margin: 5%;
+  margin-bottom: 40%;
+  border-bottom-left-radius: 20vh;
+  border-bottom-right-radius: 20vh;
+  border-top-left-radius: 5vh;
+  border-top-right-radius: 5vh;
+  transition: 2s background ease-out;
+  box-shadow: 0vw 0.6vw black;
+}
+.iconContainerWhite:hover {
+  transition: 0.5s background ease-out;
+  background-color: rgb(142, 176, 255);
+}
+
+@media screen and (max-width: 800px) {
+  .skills {
+    margin-left: 1vw;
+    width: 98vw;
+    height: 140vw;
+  }
+
+  .title,
+  .titleWhite {
+    font-size: 5vw;
+    top: -3vw;
+  }
+  .spacer {
+    top: 3.1vw;
+    border-top: 0.5vw solid white;
+  }
+  .spacerWhite {
+    top: 3.1vw;
+    border-top: 0.5vw solid black;
+  }
+  .heading {
+    font-size: 2.5vw;
+    padding: 0 2vw;
+    width: 50%;
+    height: 95vw;
+    border-top: 0.2vw solid white;
+    border-left: 0.2vw solid white;
+    border-bottom: 0.9vw solid white;
+    border-right: 0.9vw solid white;
+  }
+  .heading:hover {
+    border-bottom: 1vw solid gold;
+    border-right: 1vw solid gold;
+    border-top: 0.3vw solid gold;
+    border-left: 0.3vw solid gold;
+  }
+  .headingWhite {
+    font-size: 2.5vw;
+    padding: 0 2vw;
+    width: 50%;
+    height: 95vw;
+    border-top: 0.2vw solid rgb(0, 0, 0);
+    border-left: 0.2vw solid rgb(0, 0, 0);
+    border-bottom: 0.9vw solid rgb(0, 0, 0);
+    border-right: 0.9vw solid rgb(0, 0, 0);
+  }
+  .headingWhite:hover {
+    border-bottom: 1vw solid rgb(21, 0, 255);
+    border-right: 1vw solid rgb(21, 0, 255);
+    border-top: 0.3vw solid rgb(21, 0, 255);
+    border-left: 0.3vw solid rgb(21, 0, 255);
+  }
+  .iconContainer,
+  .iconContainerWhite {
+    height: 14vw;
+  }
+  .icons {
+    font-size: 8vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .icons p {
+    font-size: 2vw;
+  }
+}
