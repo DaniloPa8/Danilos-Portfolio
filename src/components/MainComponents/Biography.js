@@ -1,37 +1,48 @@
 import styles from "./../../styles/MainStyles/Biography.module.css";
-
 import image from "./../../images/profile.jpg";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import useIntersectingViewport from "../../hooks/useIntersectingViewport";
-import {
-  setIntersectStyles,
-  removeIntersectStyles,
-} from "./../../utils/styleUtils";
 
 const Biography = ({ theme }) => {
   const biographyRef = useRef();
   let intersect = useIntersectingViewport(biographyRef);
 
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
-    if (intersect) {
-      setIntersectStyles("biography", "bioTitle", theme);
-    }
-    if (!intersect) {
-      removeIntersectStyles("biography", "bioTitle", theme);
-    }
-  }, [intersect, theme]);
+    if (intersect) setLoaded(true);
+  }, [intersect]);
 
   return (
     <div
-      className={theme ? styles.biographyWhite : styles.biography}
+      className={`${styles.biography} ${
+        theme ? styles.biographyLight : styles.biographyDark
+      } ${loaded ? styles.biographySlideIn : ""}`}
       id="biography"
       ref={biographyRef}
     >
       <a className={styles.topAnchor} id="top" />
-      <h2 className={theme ? styles.titleWhite : styles.title} id="bioTitle">
-        <span className={theme ? styles.spacerWhite : styles.spacer}>.</span>
+      <h2
+        className={`${styles.title} ${
+          theme ? styles.titleLight : styles.titleDark
+        }`}
+        id="bioTitle"
+      >
+        <span
+          className={`${styles.spacer} ${
+            theme ? styles.spacerLight : styles.spacerDark
+          }`}
+        >
+          .
+        </span>
         Biography
-        <span className={theme ? styles.spacerWhite : styles.spacer}>.</span>
+        <span
+          className={`${styles.spacer} ${
+            theme ? styles.spacerLight : styles.spacerDark
+          }`}
+        >
+          .
+        </span>
       </h2>
       <a className={styles.biographyAnchor} id="biography" />
       <div className={styles.content}>
@@ -39,24 +50,42 @@ const Biography = ({ theme }) => {
           <img
             src={image}
             alt="Profile"
-            className={theme ? styles.profileImageWhite : styles.profileImage}
+            className={`${styles.profileImage} ${
+              theme ? styles.profileImageLight : styles.profileImageDark
+            }`}
           />
         </div>
 
         <div className={styles.rightSide}>
-          <p className={theme ? styles.hoverWhite : styles.hover}>
-            <span className={theme ? styles.hoverTextWhite : styles.hoverText}>
+          <p
+            className={`${styles.hover} ${
+              theme ? styles.hoverLight : styles.hoverDark
+            }`}
+          >
+            <span
+              className={`${styles.hoverText} ${
+                theme ? styles.hoverTextLight : styles.hoverTextDark
+              }`}
+            >
               Hover
             </span>
             <span className={styles.clickText}> Click</span> below to find out
-            more about me!{" "}
+            more about me!
           </p>
-          <div className={theme ? styles.textAreaWhite : styles.textArea}>
-            <p className={theme ? styles.p1White : styles.p1}>
+          <div
+            className={`${styles.textArea} ${
+              theme ? styles.textAreaLight : styles.textAreaDark
+            }`}
+          >
+            <p
+              className={`${styles.p1} ${
+                theme ? styles.p1Light : styles.p1Dark
+              }`}
+            >
               1. Hi! My name is Danilo Pavićević and I would love to welcome you
-              to my porfolio website. Here you will learn more about me and find
-              everything that may intrest you, I hope you will have a great
-              time. Now a little bit about myself. While studying IT at my
+              to my portfolio website. Here you will learn more about me and
+              find everything that may interest you, I hope you will have a
+              great time. Now a little bit about myself. While studying IT at my
               university, which is a hybrid course of business management and
               informational Technologies, I have gained all the required
               knowledge needed for understanding blockchain and cryptocurrency
@@ -65,7 +94,11 @@ const Biography = ({ theme }) => {
               assignment at the university, I chose to build a smart contract
               that would implement an autonomous savings functionality.
             </p>
-            <p className={theme ? styles.p2White : styles.p2}>
+            <p
+              className={`${styles.p2} ${
+                theme ? styles.p2Light : styles.p2Dark
+              }`}
+            >
               2. That project inspired me to work and study further, as I liked
               Solidity and I had been interested in crypto for years. Getting
               involved and working on the blockchain was very inspiring to me.
@@ -77,21 +110,29 @@ const Biography = ({ theme }) => {
               tutorials, building projects to test my knowledge, and reading all
               the technical documentation on Ethereum and related technologies.
             </p>
-            <p className={theme ? styles.p3White : styles.p3}>
+            <p
+              className={`${styles.p3} ${
+                theme ? styles.p3Light : styles.p3Dark
+              }`}
+            >
               3. As Solidity knowledge only is not enough for the development of
               smart contracts I decided to expand my focus on JavaScript. After
               completing a Javascript basics course I became more and more
               interested in Web Development. This course was then followed by a
               React.js course, a Node.js course, and a Typescript course.
             </p>
-            <p className={theme ? styles.p4White : styles.p4}>
+            <p
+              className={`${styles.p4} ${
+                theme ? styles.p4Light : styles.p4Dark
+              }`}
+            >
               4. After completing all of these courses I have gained significant
               knowledge of how web development works. Even though I have built
               multiple projects along with these courses I have decided that it
               is time for me to do a larger solo project that would represent my
               knowledge and be accessible to all. That is how StakeApp was made,
               a React.js and Truffle project that implements savings on the
-              blockchain and is currently hosted on Firebase.{" "}
+              blockchain and is currently hosted on Firebase.
             </p>
           </div>
         </div>

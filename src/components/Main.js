@@ -4,7 +4,7 @@ import Education from "./MainComponents/Education";
 import Skills from "./MainComponents/Skills";
 import Projects from "./MainComponents/Projects";
 import { useEffect } from "react";
-import Contact from "./Contact";
+import Contact from "./MainComponents/Contact";
 
 const Main = ({ setBackToTop, theme }) => {
   useEffect(() => {

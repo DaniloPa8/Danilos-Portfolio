@@ -17,14 +17,26 @@ const LandingPage = () => {
   if (!passLanding)
     return (
       <div className={styles.container}>
-        <div className={loadedTheme ? styles.leftSideWhite : styles.leftSide}>
+        <div
+          className={`${styles.leftSide} ${
+            loadedTheme ? styles.leftSideLight : styles.leftSideDark
+          }`}
+        >
           <p>Danilo's Portfolio</p>
         </div>
-        <div className={loadedTheme ? styles.lineWhite : styles.line}>.</div>
+        <div
+          className={`${styles.line} ${
+            loadedTheme ? styles.lineLight : styles.lineDark
+          }`}
+        >
+          .
+        </div>
         <div className={styles.rightSide}>
           <button
             onClick={() => setPassLanding(true)}
-            className={loadedTheme ? styles.continueWhite : styles.continue}
+            className={`${styles.continue} ${
+              loadedTheme ? styles.continueLight : styles.continueDark
+            }`}
           >
             Continue
           </button>

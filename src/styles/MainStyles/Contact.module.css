@@ -1,0 +1,191 @@
+/* DarkTheme */
+.contact {
+  height: 20vw;
+  margin-top: 20vw;
+  transition: 1s background;
+  opacity: 0;
+}
+.contactSlideIn {
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+  opacity: 1;
+}
+.contactDark:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.contactDark:hover > .title {
+  color: gold;
+}
+
+.heading {
+  font-style: bold;
+  width: 30%;
+  height: auto;
+  justify-self: center;
+  float: left;
+  align-self: center;
+  font-size: 1vw;
+  padding: 2%;
+  margin-left: 2%;
+  text-align: center;
+  border-top-right-radius: 0.4vw;
+  border-bottom-left-radius: 0.4vw;
+  transition: 1s;
+}
+.headingDark {
+  border-top: 0.1vw solid white;
+  border-left: 0.1vw solid white;
+  border-bottom: 0.3vw solid white;
+  border-right: 0.3vw solid white;
+  background-color: black;
+}
+.headingDark:hover {
+  box-shadow: 0.6vw 0.6vw gold;
+
+  transition: 1s;
+}
+.title {
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.2vw;
+  transition: 1s color;
+}
+.titleDark {
+  color: white;
+}
+.spacer {
+  width: 20%;
+  position: relative;
+  top: 1.4vw;
+  margin: 0 1vw;
+  display: inline-block;
+  color: transparent;
+}
+.spacerDark {
+  border-top: 0.22vw groove white;
+}
+.rightSideContent {
+  width: 100%;
+  height: auto;
+  font-size: 1vw;
+  margin: auto;
+}
+.rightSideContent h3 {
+  transition: 1s color;
+}
+.icons {
+  font-size: 5vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-top: 2vw;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.iconsDark:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+/* LightTheme */
+
+.contactLight:hover {
+  background-color: rgba(0, 4, 255, 0.05);
+}
+.contactLight:hover > .titleLight {
+  color: rgb(21, 0, 255);
+}
+
+.spacerLight {
+  border-top: 0.22vw groove rgb(0, 0, 0);
+}
+.titleLight {
+  color: rgb(0, 0, 0);
+}
+.headingLight {
+  border-top: 0.1vw solid rgb(0, 0, 0);
+  border-left: 0.1vw solid rgb(0, 0, 0);
+  border-bottom: 0.3vw solid rgb(0, 0, 0);
+  border-right: 0.3vw solid rgb(0, 0, 0);
+  background-color: white;
+}
+.headingLight:hover {
+  box-shadow: 0.6vw 0.6vw rgb(21, 0, 255);
+  transition: 1s;
+}
+.iconsLight:hover {
+  color: rgb(0, 0, 255);
+  transform: scale(1.1);
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact {
+    height: 48vw;
+    width: 100vw;
+    border-radius: 6vw;
+  }
+
+  .title {
+    font-size: 5vw;
+    top: -3vw;
+  }
+  .spacer {
+    top: 3.1vw;
+    border-top: 0.5vw solid white;
+  }
+  .spacerLight {
+    top: 3.1vw;
+    border-top: 0.5vw solid black;
+  }
+  .heading {
+    margin-left: 3vw;
+    padding-right: 4vw;
+    font-size: 2.1vw;
+  }
+  .headingDark {
+    border-top: 0.2vw solid white;
+    border-left: 0.2vw solid white;
+    border-bottom: 0.9vw solid white;
+    border-right: 0.9vw solid white;
+  }
+  .headingDark:hover {
+    border-bottom: 1vw solid gold;
+    border-right: 1vw solid gold;
+    border-top: 0.3vw solid gold;
+    border-left: 0.3vw solid gold;
+    transform: scale(1);
+  }
+  .headingLight {
+    border-top: 0.2vw solid rgb(0, 0, 0);
+    border-left: 0.2vw solid rgb(0, 0, 0);
+    border-bottom: 0.9vw solid rgb(0, 0, 0);
+    border-right: 0.9vw solid rgb(0, 0, 0);
+  }
+  .headingLight:hover {
+    transform: scale(1);
+    border-bottom: 1vw solid rgb(21, 0, 255);
+    border-right: 1vw solid rgb(21, 0, 255);
+    border-top: 0.3vw solid rgb(21, 0, 255);
+    border-left: 0.3vw solid rgb(21, 0, 255);
+  }
+  .rightSideContent {
+    font-size: 2vw;
+    margin: auto;
+    width: 95%;
+  }
+  .rightSideContent h3 {
+    padding-left: 2vw;
+    font-size: 2.4vw;
+  }
+
+  .icons {
+    font-size: 10vw;
+  }
+}

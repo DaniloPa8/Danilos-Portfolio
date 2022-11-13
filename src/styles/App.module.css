@@ -1,20 +1,48 @@
 /* General styles */
-
 .App {
   text-align: center;
   font-family: "Quantico", sans-serif;
-  font-weight: 600;
   margin: 0;
-  color: white;
   transition: ease-in 2s;
 }
 .AppLight {
-  text-align: center;
-  font-family: "Quantico", sans-serif;
-  margin: 0;
   font-weight: 600;
-
   color: black;
+}
+.AppDark {
+  color: white;
+}
+
+.themeSwitch {
+  font-size: 5vw;
+  position: fixed;
+  top: 20vw;
+  left: -2.5vw;
+  width: 5vw;
+  height: 5.5vw;
+  border-top-right-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+  padding: 0.3vw;
+  padding-left: 1.5vw;
+  transition: 1s ease;
+  z-index: 99;
+}
+.themeSwitch:hover {
+  transform: scale(1.1);
+}
+.themeSwitchDark {
+  background-color: black;
+  border: groove white 0.2vw;
+}
+.themeSwitchDark:hover {
+  color: gold;
+}
+.themeSwitchLight {
+  background-color: rgb(255, 255, 255);
+  border: groove rgb(0, 0, 0) 0.2vw;
+}
+.themeSwitchLight:hover {
+  color: rgb(21, 0, 255);
 }
 
 html {
@@ -32,7 +60,11 @@ body {
   overflow-y: scroll;
   height: max-content;
 }
-
+h2,
+h3,
+p {
+  cursor: default;
+}
 .bodyLight {
   background-color: rgba(153, 153, 153, 0.373);
   opacity: 1;
@@ -89,8 +121,63 @@ body {
 }
 
 .bodyDark {
-  background-color: #000000;
-  opacity: 0.9;
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
+  background-image: linear-gradient(
+      30deg,
+      #000000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #000000 87.5%,
+      #000000
+    ),
+    linear-gradient(
+      150deg,
+      #000000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #000000 87.5%,
+      #000000
+    ),
+    linear-gradient(
+      30deg,
+      #000000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #000000 87.5%,
+      #000000
+    ),
+    linear-gradient(
+      150deg,
+      #000000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #000000 87.5%,
+      #000000
+    ),
+    linear-gradient(
+      60deg,
+      #020202 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #020202 75%,
+      #020202
+    ),
+    linear-gradient(
+      60deg,
+      #020202 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #020202 75%,
+      #020202
+    );
+  background-size: 20px 35px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+}
+
+/* .bodyDark {
+  background-color: rgb(0, 0, 0);
+  opacity: 1;
   background-image: linear-gradient(
       30deg,
       #131313 12%,
@@ -141,7 +228,7 @@ body {
     );
   background-size: 20px 35px;
   background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
-}
+} */
 
 /* SCOLLBAR */
 ::-webkit-scrollbar {
@@ -164,53 +251,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(21, 0, 255);
 }
-.themeSwitch {
-  font-size: 5vw;
-  position: fixed;
-  top: 20vw;
-  left: -2.5vw;
-  width: 5vw;
-  height: 5.5vw;
-  background-color: black;
-  border: groove white 0.2vw;
-  border-top-right-radius: 2vw;
-  border-bottom-right-radius: 2vw;
-  padding: 0.3vw;
-  padding-left: 1.5vw;
-  transition: 1s ease;
-  z-index: 99;
-}
-.themeSwitch:hover {
-  transform: scale(1.1);
-  color: gold;
-}
-.themeSwitchWhite {
-  font-size: 5vw;
-  position: fixed;
-  top: 20vw;
-  left: -2.5vw;
-  width: 5vw;
-  height: 5.5vw;
-  background-color: rgb(255, 255, 255);
-  border: groove rgb(0, 0, 0) 0.2vw;
-  border-top-right-radius: 2vw;
-  border-bottom-right-radius: 2vw;
-  padding: 0.2vw;
-  padding-left: 1.5vw;
-  transition: 1s ease;
-  z-index: 99;
-}
-.themeSwitchWhite:hover {
-  transform: scale(1.1);
-  color: rgb(21, 0, 255);
-}
 
 @media screen and (max-width: 1000px) {
-  .App,
-  .AppLight {
+  .App {
     font-family: Arial, Helvetica, sans-serif;
     width: 100vw;
     overflow-x: hidden;
+    font-weight: 600;
   }
   html {
     width: 100vw;
@@ -221,8 +268,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
   }
-  .themeSwitch,
-  .themeSwitchWhite {
+  .themeSwitch {
     width: 11.5vw;
     height: 11.5vw;
     font-size: 12vw;
@@ -245,5 +291,60 @@ body {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(21, 0, 255);
+  }
+
+  .bodyDark {
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    background-image: linear-gradient(
+        30deg,
+        #0e0e0e 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #0e0e0e 87.5%,
+        #0e0e0e
+      ),
+      linear-gradient(
+        150deg,
+        #0e0e0e 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #0e0e0e 87.5%,
+        #0e0e0e
+      ),
+      linear-gradient(
+        30deg,
+        #0e0e0e 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #0e0e0e 87.5%,
+        #0e0e0e
+      ),
+      linear-gradient(
+        150deg,
+        #0e0e0e 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #0e0e0e 87.5%,
+        #0e0e0e
+      ),
+      linear-gradient(
+        60deg,
+        #0d0d0dbd 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #0d0d0dbd 75%,
+        #0d0d0dbd
+      ),
+      linear-gradient(
+        60deg,
+        #0d0d0dbd 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #0d0d0dbd 75%,
+        #0d0d0dbd
+      );
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
   }
 }

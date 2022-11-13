@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
+
 const useIntersectingViewport = (ref) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
 

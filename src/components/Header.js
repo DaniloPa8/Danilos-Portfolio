@@ -1,14 +1,27 @@
 import styles from "./../styles/Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
+
 const Header = ({ backToTop, theme, setBackToTop }) => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   return (
-    <div className={theme ? styles.whiteHeader : styles.header}>
-      <div className={theme ? styles.myNameWhite : styles.myName}>
+    <div
+      className={`${styles.header} ${
+        theme ? styles.headerLight : styles.headerDark
+      }`}
+    >
+      <div
+        className={`${styles.myName} ${
+          theme ? styles.myNameLight : styles.myNameDark
+        }`}
+      >
         <p className={styles.nameText}> &#60; Pavićević Danilo &#47;&#62;</p>
-        <p className={theme ? styles.whiteProffesion : styles.proffesion}>
+        <p
+          className={`${styles.proffesion} ${
+            theme ? styles.proffesionLight : styles.proffesionDark
+          }`}
+        >
           Engineer of Information Technologies
         </p>
       </div>
@@ -72,7 +85,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
         }
       >
         <ul
-          className={
+          className={`${
             hamburgerOpen
               ? theme
                 ? styles.dropdownListWhite
@@ -80,7 +93,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
               : theme
               ? styles.dropdownListOutWhite
               : styles.dropdownListOut
-          }
+          }`}
         >
           <li
             onClick={() => {

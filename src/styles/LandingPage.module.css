@@ -20,30 +20,36 @@ body {
 }
 .line {
   color: transparent;
-  border-right: 0.2vw solid white;
   height: 100%;
   grid-template-columns: 2;
   position: relative;
   justify-self: center;
   animation: 3.5s ease-out 0s 1 slideInFromTop;
 }
+.lineDark {
+  border-right: 0.2vw solid white;
+}
 .leftSide {
   font-size: 2vw;
-  color: white;
   padding: 2vw;
   grid-column: 1;
   position: relative;
   justify-self: center;
 }
+.leftSideDark {
+  color: white;
+}
 .leftSide p {
   overflow: hidden;
-  border-right: 0.11vw solid gold;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.15em; /* Adjust as needed */
   font-family: "Monoton", cursive;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   cursor: default;
+}
+.leftSideDark p {
+  border-right: 0.11vw solid gold;
 }
 
 .rightSide {
@@ -55,84 +61,54 @@ body {
 
 .continue {
   position: relative;
+  background: transparent;
+  font-family: "Monoton", cursive;
+  width: 15vw;
+  height: 5vw;
+  font-size: 2vw;
+  border-radius: 5px;
+  opacity: 0.5;
+  margin: auto;
+  transition: 1s;
+  animation: 3.5s ease-out 0s 1 slideInFromRight;
+}
+.continueDark {
   border: 0.1px solid white;
-  background: transparent;
-  font-family: "Monoton", cursive;
   color: white;
-  width: 15vw;
-  height: 5vw;
-  font-size: 2vw;
-  border-radius: 5px;
-  opacity: 0.5;
-  margin: auto;
-  transition: 1s;
-  animation: 3.5s ease-out 0s 1 slideInFromRight;
 }
-
 .continue:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 1s;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.continueDark:hover {
   border: 0.3px solid gold;
-  cursor: pointer;
   color: gold;
-  opacity: 0.8;
-  transition: 1s;
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.lineWhite {
-  color: transparent;
+
+/* LightTheme */
+
+.lineLight {
   border-right: 0.2vw solid rgb(0, 0, 0);
-  height: 100%;
-  grid-template-columns: 2;
-  position: relative;
-  justify-self: center;
-  animation: 3.5s ease-out 0s 1 slideInFromTop;
 }
-.leftSideWhite {
-  font-size: 2vw;
+.leftSideLight {
   color: rgb(0, 0, 0);
-  padding: 2vw;
-  grid-column: 1;
-  position: relative;
-  justify-self: center;
 }
-.leftSideWhite p {
-  overflow: hidden;
+.leftSideLight p {
   border-right: 0.11vw solid rgb(0, 0, 0);
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
   font-weight: 500;
-  font-family: "Monoton", cursive;
-  animation: typing 3.5s steps(40, end),
-    blink-caret-white 0.75s step-end infinite;
-  cursor: default;
 }
 
-.continueWhite {
-  position: relative;
+.continueLight {
   border: 0.1px solid rgb(0, 0, 0);
-  background: transparent;
-  font-family: "Monoton", cursive;
   color: rgb(0, 0, 0);
-  width: 15vw;
-  height: 5vw;
-  font-size: 2vw;
-  font-weight: 900;
-  border-radius: 5px;
-  opacity: 0.5;
-  margin: auto;
-  transition: 1s;
-  animation: 3.5s ease-out 0s 1 slideInFromRight;
 }
 
-.continueWhite:hover {
+.continueLight:hover {
   border: 0.3px solid rgb(21, 0, 255);
-  cursor: pointer;
   color: rgb(21, 0, 255);
-  opacity: 0.8;
-  transition: 1s;
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* The typing effect */
@@ -202,8 +178,7 @@ body {
     grid-template-rows: 1fr;
     align-items: center;
   }
-  .leftSide,
-  .leftSideWhite {
+  .leftSide {
     font-size: 3vw;
     left: 0;
     top: 0;
@@ -211,8 +186,7 @@ body {
     justify-self: center;
     position: relative;
   }
-  .line,
-  .lineWhite {
+  .line {
     position: relative;
     width: 10%;
     grid-column: 2;
@@ -228,8 +202,7 @@ body {
     top: 0;
     left: 0;
   }
-  .continue,
-  .continueWhite {
+  .continue {
     position: relative;
     height: 10vw;
     width: 40vw;

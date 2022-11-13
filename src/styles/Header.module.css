@@ -3,17 +3,19 @@
   display: flex;
   flex-direction: row;
   font-family: inherit;
-  border-bottom: solid 0.2rem white;
 
   width: 100%;
   height: 6.5vw;
   position: fixed;
   top: 0;
-  background-color: rgb(0, 0, 0);
   z-index: 20;
   transition: ease-in 2s;
 }
-.header:before {
+.headerDark {
+  border-bottom: solid 0.2rem white;
+  background-color: rgb(0, 0, 0);
+}
+.headerDark:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -23,7 +25,7 @@
   width: 0;
   z-index: 20;
 }
-.header:after {
+.headerDark:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -41,7 +43,7 @@
   font-weight: 400;
   word-spacing: 0.2vw;
 }
-.myName:before {
+.myNameDark:before {
   content: "";
   position: absolute;
   top: 0;
@@ -51,7 +53,7 @@
   width: 0;
   z-index: 20;
 }
-.myName:after {
+.myNameDark:after {
   content: "";
   position: absolute;
   top: 0;
@@ -72,8 +74,10 @@
   position: relative;
   left: 4vw;
   bottom: 1.8vw;
-  color: rgba(255, 227, 68, 0.861);
   font-weight: 400;
+}
+.proffesionDark {
+  color: rgba(255, 227, 68, 0.861);
 }
 .biography,
 .skills,
@@ -150,21 +154,11 @@
 
 /* WhiteTheme */
 
-.whiteHeader {
-  display: flex;
-  flex-direction: row;
-  font-family: inherit;
+.headerLight {
   border-bottom: solid 0.2rem rgb(0, 0, 0);
-
-  width: 100%;
-  height: 6.5vw;
-  position: fixed;
-  top: 0;
   background-color: rgb(255, 255, 255);
-  z-index: 20;
-  transition: ease-in 2s;
 }
-.whiteHeader:before {
+.headerLight:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -174,7 +168,7 @@
   width: 0;
   z-index: 20;
 }
-.whiteHeader:after {
+.headerLight:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -184,14 +178,8 @@
   width: 0;
   z-index: 20;
 }
-.myNameWhite {
-  width: 25%;
-  margin-top: 1vw;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  word-spacing: 0.2vw;
-}
-.myNameWhite:before {
+
+.myNameLight:before {
   content: "";
   position: absolute;
   top: 0;
@@ -201,7 +189,7 @@
   width: 0;
   z-index: 20;
 }
-.myNameWhite:after {
+.myNameLight:after {
   content: "";
   position: absolute;
   top: 0;
@@ -211,26 +199,19 @@
   width: 0;
   z-index: 20;
 }
-.whiteProffesion {
-  font-size: 1.4vw;
-  position: relative;
-  left: 4vw;
-  bottom: 1.8vw;
+.proffesionLight {
   color: rgb(255, 196, 0);
-  font-weight: 400;
 }
 
 /* Mobile */
 
 @media screen and (max-width: 800px) {
-  .header,
-  .whiteHeader {
+  .header {
     height: 12vw;
     width: 100vw;
     font-size: 10vw;
   }
-  .myName,
-  .myNameWhite {
+  .myName {
     width: 40%;
   }
   .nameText {
@@ -239,8 +220,7 @@
     width: 50vw;
     font-size: 4.5vw;
   }
-  .proffesion,
-  .whiteProffesion {
+  .proffesion {
     font-size: 3.2vw;
     width: 50vw;
     top: -3vw;

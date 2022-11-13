@@ -28,9 +28,15 @@ const App = ({ loadedTheme }) => {
   }, [themeState]);
 
   return (
-    <div className={themeState ? styles.AppLight : styles.App}>
+    <div
+      className={`${styles.App} ${
+        themeState ? styles.AppLight : styles.AppDark
+      }`}
+    >
       <div
-        className={themeState ? styles.themeSwitchWhite : styles.themeSwitch}
+        className={`${styles.themeSwitch} ${
+          themeState ? styles.themeSwitchLight : styles.themeSwitchDark
+        }`}
         onClick={() => setThemeState((prev) => !prev)}
       >
         <TiLightbulb className={styles.bulb} />

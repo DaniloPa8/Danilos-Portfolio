@@ -4,19 +4,14 @@
   margin-top: 10vw;
   margin-bottom: 5vw;
   transition: 1s background ease-in;
-  transition: opacity 3s ease;
   opacity: 0;
 }
-.educationAppear {
-  /* animation: fadeIn 3s; */
+.educationSlideIn {
+  animation: 2s ease-out 0s 1 slideInFromRight;
   opacity: 1;
 }
-.educationDisaapear {
-  /* animation: fadeOut 3s; */
-  opacity: 0;
-}
+
 .spacer {
-  border-top: 0.22vw groove white;
   width: 20%;
   position: relative;
   top: 1.4vw;
@@ -24,10 +19,13 @@
   display: inline-block;
   color: transparent;
 }
-.education:hover {
+.spacerDark {
+  border-top: 0.22vw groove white;
+}
+.educationDark:hover {
   background-color: rgba(0, 4, 255, 0.05);
 }
-.education:hover > .title {
+.educationDark:hover > .title {
   color: gold;
 }
 .educationAnchor {
@@ -39,25 +37,29 @@
   width: 60%;
   margin: auto;
   padding: 1%;
-  border-top: 0.1vw solid white;
-  border-left: 0.1vw solid white;
-  border-bottom: 0.3vw solid white;
-  border-right: 0.3vw solid white;
   border-top-right-radius: 0.4vw;
   border-bottom-left-radius: 0.4vw;
   transition: 1s;
 }
-.heading:hover {
-  border-bottom: 0.3vw solid gold;
-  border-right: 0.3vw solid gold;
+.headingDark {
+  border-top: 0.1vw solid white;
+  border-left: 0.1vw solid white;
+  border-bottom: 0.3vw solid white;
+  border-right: 0.3vw solid white;
+  background-color: black;
+}
+.headingDark:hover {
+  box-shadow: 0.6vw 0.6vw gold;
   transition: 1s;
-  transform: scale(1.1);
 }
 .title {
   font-size: 1.5vw;
   position: relative;
   top: -1.2vw;
   transition: 1s color;
+}
+.titleDark {
+  color: white;
 }
 .headingText {
   font-size: 1vw;
@@ -78,97 +80,82 @@
   font-size: 1vw;
 }
 
-/* WhiteTheme */
-.educationWhite {
-  height: auto;
-  margin-top: 10vw;
-  margin-bottom: 5vw;
-  transition: opacity 3s ease;
-  opacity: 0;
-}
+/* LightTheme */
 
-.educationWhite:hover {
+.educationLight:hover {
   background-color: rgba(0, 4, 255, 0.05);
 }
-.educationWhite:hover > .titleWhite {
+.educationLight:hover > .titleLight {
   color: rgb(21, 0, 255);
 }
 
-.spacerWhite {
+.spacerLight {
   border-top: 0.22vw groove rgb(0, 0, 0);
-  width: 20%;
-  position: relative;
-  top: 1.4vw;
-  margin: 0 1vw;
-  display: inline-block;
-  color: transparent;
 }
-.titleWhite {
-  font-size: 1.5vw;
-  position: relative;
-  top: -1.2vw;
+.titleLight {
   color: rgb(0, 0, 0);
-  transition: 1s color;
 }
-.headingWhite {
-  height: 15%;
-  width: 60%;
-  margin: auto;
-  padding: 1%;
+.headingLight {
   border-top: 0.1vw solid rgb(0, 0, 0);
   border-left: 0.1vw solid rgb(0, 0, 0);
   border-bottom: 0.3vw solid rgb(0, 0, 0);
   border-right: 0.3vw solid rgb(0, 0, 0);
-  border-top-right-radius: 0.4vw;
-  border-bottom-left-radius: 0.4vw;
+  background-color: white;
+}
+.headingLight:hover {
+  box-shadow: 0.6vw 0.6vw rgb(21, 0, 255);
   transition: 1s;
 }
-.headingWhite:hover {
-  border-bottom: 0.3vw solid rgb(21, 0, 255);
-  border-right: 0.3vw solid rgb(21, 0, 255);
-  transition: 1s;
-  transform: scale(1.1);
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
+
 @media screen and (max-width: 800px) {
-  .education,
-  .educationWhite {
+  .education {
     margin-left: 1vw;
     width: 98vw;
     height: 250vw;
   }
 
-  .title,
-  .titleWhite {
+  .title {
     font-size: 5vw;
     top: -3vw;
   }
-  .spacer {
+  .spacerDark {
     top: 3.1vw;
     border-top: 0.5vw solid white;
   }
-  .spacerWhite {
+  .spacerLight {
     top: 3.1vw;
     border-top: 0.5vw solid black;
   }
-  .heading {
+  .headingDark {
     border-top: 0.2vw solid white;
     border-left: 0.2vw solid white;
     border-bottom: 0.9vw solid white;
     border-right: 0.9vw solid white;
   }
-  .heading:hover {
+  .headingDark:hover {
     border-bottom: 1vw solid gold;
     border-right: 1vw solid gold;
     border-top: 0.3vw solid gold;
     border-left: 0.3vw solid gold;
   }
-  .headingWhite {
+  .headingLight {
     border-top: 0.2vw solid rgb(0, 0, 0);
     border-left: 0.2vw solid rgb(0, 0, 0);
     border-bottom: 0.9vw solid rgb(0, 0, 0);
     border-right: 0.9vw solid rgb(0, 0, 0);
   }
-  .headingWhite:hover {
+  .headingLight:hover {
     border-bottom: 1vw solid rgb(21, 0, 255);
     border-right: 1vw solid rgb(21, 0, 255);
     border-top: 0.3vw solid rgb(21, 0, 255);
