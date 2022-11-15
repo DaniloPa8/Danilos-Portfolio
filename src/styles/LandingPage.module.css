@@ -245,9 +245,11 @@ body {
   }
   .continueDark {
     border: 0.3vw solid white;
+    opacity: 1;
   }
   .continueLight {
     border: 0.3vw solid black;
+    opacity: 1;
   }
   body {
     overflow: hidden;
