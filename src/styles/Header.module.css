@@ -12,13 +12,14 @@
   transition: ease-in 2s;
 }
 .headerDark {
-  border-bottom: solid 0.2rem white;
+  border-bottom: solid 0.3vw white;
+  border-top: solid 0.3vw white;
   background-color: rgb(0, 0, 0);
 }
 .headerDark:before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -0.1vw;
   right: 0;
   border-top: 3vw solid transparent;
   border-right: 3vw solid white;
@@ -28,7 +29,7 @@
 .headerDark:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -0.1vw;
   left: 0;
   border-top: 3vw solid transparent;
   border-left: 3vw solid white;
@@ -39,14 +40,14 @@
 .myName {
   width: 25%;
   margin-top: 1vw;
-  font-family: "VT323", monospace;
-  font-weight: 400;
+  font-family: "Quantico", sans-serif;
+  font-weight: 600;
   word-spacing: 0.2vw;
 }
 .myNameDark:before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -0.1vw;
   left: 0;
   border-bottom: 3vw solid transparent;
   border-left: 3vw solid white;
@@ -56,7 +57,7 @@
 .myNameDark:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -0.1vw;
   right: 0;
   border-bottom: 3vw solid transparent;
   border-right: 3vw solid white;
@@ -64,20 +65,20 @@
   z-index: 20;
 }
 .nameText {
-  font-size: 2.2vw;
+  font-size: 2vw;
   margin-top: 0.5vw;
   transition: 1s;
 }
 
 .proffesion {
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   position: relative;
   left: 4vw;
   bottom: 1.8vw;
-  font-weight: 400;
+  font-weight: 600;
 }
 .proffesionDark {
-  color: rgba(255, 227, 68, 0.861);
+  color: rgb(0, 255, 8);
 }
 .biography,
 .skills,
@@ -100,13 +101,31 @@
 .backToTopNon p {
   margin: 0;
 }
-.biography:hover,
-.skills:hover,
-.projects:hover,
-.education:hover,
-.contact:hover,
-.backToTopAnimated:hover {
+.biographyLight:hover,
+.skillsLight:hover,
+.projectsLight:hover,
+.educationLight:hover,
+.contactLight:hover,
+.backToTopAnimatedLight:hover {
   background-color: rgba(34, 38, 255, 0.5);
+  transition: 0.1s;
+  --g: #0000 98%, #000;
+  --r: 0.5vw;
+  mask: radial-gradient(var(--r) at 0 0, var(--g)) 0 0,
+    radial-gradient(var(--r) at 100% 0, var(--g)) 100% 0,
+    radial-gradient(var(--r) at 0 100%, var(--g)) 0 100%,
+    radial-gradient(var(--r) at 100% 100%, var(--g)) 100% 100%;
+  mask-size: 51% 51%;
+  mask-repeat: no-repeat;
+}
+
+.biographyDark:hover,
+.skillsDark:hover,
+.projectsDark:hover,
+.educationDark:hover,
+.contactDark:hover,
+.backToTopAnimatedDark:hover {
+  background-color: rgba(0, 255, 8, 0.5);
   transition: 0.1s;
   --g: #0000 98%, #000;
   --r: 0.5vw;
@@ -155,13 +174,14 @@
 /* WhiteTheme */
 
 .headerLight {
-  border-bottom: solid 0.2rem rgb(0, 0, 0);
+  border-bottom: solid 0.3vw rgb(0, 0, 0);
+  border-top: solid 0.3vw rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
 }
 .headerLight:before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -0.1vw;
   right: 0;
   border-top: 3vw solid transparent;
   border-right: 3vw solid rgb(0, 0, 0);
@@ -171,7 +191,7 @@
 .headerLight:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -0.1vw;
   left: 0;
   border-top: 3vw solid transparent;
   border-left: 3vw solid rgb(0, 0, 0);
@@ -182,7 +202,7 @@
 .myNameLight:before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -0.1vw;
   left: 0;
   border-bottom: 3vw solid transparent;
   border-left: 3vw solid rgb(0, 0, 0);
@@ -192,7 +212,7 @@
 .myNameLight:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -0.1vw;
   right: 0;
   border-bottom: 3vw solid transparent;
   border-right: 3vw solid rgb(0, 0, 0);
@@ -200,7 +220,7 @@
   z-index: 20;
 }
 .proffesionLight {
-  color: rgb(255, 196, 0);
+  color: rgb(21, 0, 255);
 }
 
 /* Mobile */
@@ -212,20 +232,21 @@
     font-size: 10vw;
   }
   .myName {
-    width: 40%;
+    width: 50%;
   }
   .nameText {
     margin-top: 1vw;
     margin-left: 2vw;
     width: 50vw;
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
   .proffesion {
-    font-size: 3.2vw;
+    font-size: 2vw;
     width: 50vw;
     top: -3vw;
     margin-left: 8vw;
     font-weight: 540;
+    flex-wrap: nowrap;
   }
   .hamburgerDiv {
     display: block;
@@ -235,13 +256,22 @@
     font-size: 8vw;
     transition: 500ms color;
   }
-  .hamburgerOpen {
+  .hamburgerOpenDark {
     display: block;
     position: absolute;
     right: 4vw;
     top: 1vw;
     font-size: 8vw;
-    color: gold;
+    color: rgb(0, 255, 8);
+    transition: 500ms color ease;
+  }
+  .hamburgerOpenLight {
+    display: block;
+    position: absolute;
+    right: 4vw;
+    top: 1vw;
+    font-size: 8vw;
+    color: rgb(21, 0, 255);
     transition: 500ms color ease;
   }
   .backToTopAnimated {
@@ -267,9 +297,11 @@
     text-align: center;
     opacity: 1;
     transition: opacity 500ms;
+    display: block;
   }
   .dropdownContainerFadeOut {
     opacity: 0;
+    display: none;
     transition: opacity 500ms;
   }
   .dropdownList {
@@ -308,6 +340,10 @@
   .dropdownList li {
     width: 100%;
     padding: 2vw 0;
+  }
+  .anchorLink {
+    text-decoration: none;
+    color: black;
   }
   .dropdownListOut li {
     width: 100%;

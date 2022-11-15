@@ -6,14 +6,12 @@
   opacity: 0;
 }
 .contactSlideIn {
-  animation: 2s ease-out 0s 1 slideInFromLeft;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
   opacity: 1;
 }
-.contactDark:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
+
 .contactDark:hover > .title {
-  color: gold;
+  color: rgb(0, 255, 8);
 }
 
 .heading {
@@ -26,7 +24,9 @@
   font-size: 1vw;
   padding: 2%;
   margin-left: 2%;
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
+
   border-top-right-radius: 0.4vw;
   border-bottom-left-radius: 0.4vw;
   transition: 1s;
@@ -39,7 +39,7 @@
   background-color: black;
 }
 .headingDark:hover {
-  box-shadow: 0.6vw 0.6vw gold;
+  box-shadow: 0.6vw 0.6vw rgb(0, 255, 8);
 
   transition: 1s;
 }
@@ -80,15 +80,12 @@
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .iconsDark:hover {
-  color: gold;
+  color: rgb(0, 255, 8);
   transform: scale(1.1);
 }
 
 /* LightTheme */
 
-.contactLight:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
 .contactLight:hover > .titleLight {
   color: rgb(21, 0, 255);
 }
@@ -156,10 +153,7 @@
     border-right: 0.9vw solid white;
   }
   .headingDark:hover {
-    border-bottom: 1vw solid gold;
-    border-right: 1vw solid gold;
-    border-top: 0.3vw solid gold;
-    border-left: 0.3vw solid gold;
+    box-shadow: 1vw 1vw rgb(0, 255, 8);
     transform: scale(1);
   }
   .headingLight {
@@ -170,10 +164,7 @@
   }
   .headingLight:hover {
     transform: scale(1);
-    border-bottom: 1vw solid rgb(21, 0, 255);
-    border-right: 1vw solid rgb(21, 0, 255);
-    border-top: 0.3vw solid rgb(21, 0, 255);
-    border-left: 0.3vw solid rgb(21, 0, 255);
+    box-shadow: 1vw 1vw rgb(21, 0, 255);
   }
   .rightSideContent {
     font-size: 2vw;

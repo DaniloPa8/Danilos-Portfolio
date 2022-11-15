@@ -19,6 +19,7 @@ const Biography = ({ theme }) => {
         theme ? styles.biographyLight : styles.biographyDark
       } ${loaded ? styles.biographySlideIn : ""}`}
       id="biography"
+      name="biography"
       ref={biographyRef}
     >
       <a className={styles.topAnchor} id="top" />

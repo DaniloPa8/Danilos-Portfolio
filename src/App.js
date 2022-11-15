@@ -2,7 +2,7 @@ import styles from "./styles/App.module.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import { TiLightbulb } from "react-icons/ti";
-
+import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const App = ({ loadedTheme }) => {
@@ -28,26 +28,28 @@ const App = ({ loadedTheme }) => {
   }, [themeState]);
 
   return (
-    <div
-      className={`${styles.App} ${
-        themeState ? styles.AppLight : styles.AppDark
-      }`}
-    >
+    <BrowserRouter>
       <div
-        className={`${styles.themeSwitch} ${
-          themeState ? styles.themeSwitchLight : styles.themeSwitchDark
+        className={`${styles.App} ${
+          themeState ? styles.AppLight : styles.AppDark
         }`}
-        onClick={() => setThemeState((prev) => !prev)}
       >
-        <TiLightbulb className={styles.bulb} />
+        <div
+          className={`${styles.themeSwitch} ${
+            themeState ? styles.themeSwitchLight : styles.themeSwitchDark
+          }`}
+          onClick={() => setThemeState((prev) => !prev)}
+        >
+          <TiLightbulb className={styles.bulb} />
+        </div>
+        <Header
+          backToTop={displayBackToTop}
+          setBackToTop={setDisplayBackToTop}
+          theme={themeState}
+        />
+        <Main setBackToTop={setDisplayBackToTop} theme={themeState} />
       </div>
-      <Header
-        backToTop={displayBackToTop}
-        setBackToTop={setDisplayBackToTop}
-        theme={themeState}
-      />
-      <Main setBackToTop={setDisplayBackToTop} theme={themeState} />
-    </div>
+    </BrowserRouter>
   );
 };
 

@@ -8,14 +8,12 @@
   transition: 1s background ease-in;
 }
 .biographySlideIn {
-  animation: 2s ease-out 0s 1 slideInFromLeft;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
   opacity: 1;
 }
-.biographyDark:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
+
 .biographyDark:hover > .titleDark {
-  color: gold;
+  color: rgb(0, 255, 8);
 }
 .topAnchor {
   position: relative;
@@ -64,10 +62,10 @@
   transform: scale(1.05);
 }
 .profileImageDark {
-  box-shadow: 0.6vw 1.2vw rgba(0, 4, 255, 0.2);
+  box-shadow: 0.6vw 1.2vw rgba(0, 255, 8, 0.4);
 }
 .profileImageDark:hover {
-  box-shadow: 0.3vw 0.6vw rgba(0, 4, 255, 0.5);
+  box-shadow: 0.3vw 0.6vw rgb(0, 255, 8);
   box-shadow: 1.2vw 1.6vw rgb(255, 255, 255);
 }
 
@@ -105,98 +103,114 @@
   box-shadow: 0.5vw 1vw rgba(0, 0, 255, 0.614);
   background-color: rgba(0, 0, 0, 0.8);
 }
-.textArea:hover .p1 {
-  background-color: transparent;
+.textAreaDark:hover .p1Dark,
+.textAreaDark:hover .p2Dark,
+.textAreaDark:hover .p3Dark,
+.textAreaDark:hover .p4Dark {
+  transition: 3s color;
 }
-.textArea:hover .p2 {
-  background-color: transparent;
-}
-.textArea:hover .p3 {
-  background-color: transparent;
-}
-.textArea:hover .p4 {
-  background-color: transparent;
-}
+
 .p1Dark {
   justify-self: right;
   align-self: flex-end;
-  box-shadow: -0.3vw -0.5vw rgba(0, 0, 255, 0.614);
+  box-shadow: -0.3vw -0.5vw rgba(0, 255, 8, 0.3);
   transition: 1s ease;
+  height: 22vw;
+  width: 25vw;
+  position: relative;
 }
 .textAreaDark:hover .p1Dark::before {
   content: "";
   background-color: black;
-  width: 27vw;
-  height: 24.5vw;
+  border: solid 0.2vw black;
   position: absolute;
-  top: 19vw;
-  left: 37vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
   z-index: -1;
 }
 
 .p1Dark:hover {
-  box-shadow: -0.3vw -0.5vw gold;
+  box-shadow: -0.3vw -0.5vw rgb(0, 255, 8);
   transition: 1s ease;
 }
 .p2Dark {
-  height: 18.5vw;
-  box-shadow: 0.3vw -0.5vw rgba(0, 0, 255, 0.614);
+  box-shadow: 0.3vw -0.5vw rgba(0, 255, 8, 0.3);
   transition: 1s ease;
+  width: 25vw;
+  height: 19vw;
   align-self: flex-end;
+  position: relative;
 }
 .textAreaDark:hover .p2Dark::before {
   content: "";
   background-color: black;
-  width: 27vw;
-  height: 20.5vw;
+  border: solid 0.2vw black;
   position: absolute;
-  top: 23vw;
-  left: 66.5vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
+
   z-index: -1;
 }
 .p2Dark:hover {
-  box-shadow: 0.3vw -0.5vw gold;
+  box-shadow: 0.3vw -0.5vw rgb(0, 255, 8);
   transition: 1s ease;
 }
 .p3Dark {
   width: 19vw;
   height: 13vw;
   justify-self: right;
-  box-shadow: -0.3vw 0.5vw rgba(0, 0, 255, 0.614);
+  box-shadow: -0.3vw 0.5vw rgba(0, 255, 8, 0.3);
   transition: 1s ease;
+  position: relative;
 }
 .textAreaDark:hover .p3Dark::before {
   content: "";
   background-color: black;
-  width: 21vw;
-  height: 15.5vw;
+  border: solid 0.2vw black;
   position: absolute;
-  top: 45.5vw;
-  left: 43vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
   z-index: -1;
 }
 .p3Dark:hover {
-  box-shadow: -0.3vw 0.5vw gold;
+  box-shadow: -0.3vw 0.5vw rgb(0, 255, 8);
   transition: 1s ease;
 }
 .p4Dark {
   width: 21vw;
   height: 16vw;
-  box-shadow: 0.3vw 0.5vw rgba(0, 0, 255, 0.614);
+  box-shadow: 0.3vw 0.5vw rgba(0, 255, 8, 0.3);
   transition: 1s ease;
+  position: relative;
 }
 .textAreaDark:hover .p4Dark::before {
   content: "";
   background-color: black;
-  width: 23vw;
-  height: 18vw;
+  border: solid 0.2vw black;
   position: absolute;
-  top: 45.7vw;
-  left: 66.5vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
+
   z-index: -1;
 }
 .p4Dark:hover {
-  box-shadow: 0.3vw 0.5vw gold;
+  box-shadow: 0.3vw 0.5vw rgb(0, 255, 8);
   transition: 1s ease;
 }
 .textArea {
@@ -207,7 +221,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.7fr 1fr;
   z-index: 99;
-  height: 47vw;
+  height: 48vw;
 }
 
 .textAreaDark {
@@ -215,7 +229,7 @@
   --c: rgb(255, 255, 255);
   color: rgba(0, 0, 0, 0.05);
   padding-block: var(--b);
-  background: linear-gradient(var(--c) 50%, rgb(17, 2, 2) 0) 0%
+  background: linear-gradient(var(--c) 50%, rgb(255, 255, 255) 0) 0%
       calc(100% - var(--_p, 0%)) / 100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p, 0%) / var(--_p, 0%) var(--b)
       no-repeat;
@@ -228,6 +242,7 @@
 .textAreaDark:hover {
   --_p: 100%;
   --_s: 0.3s;
+  color: white;
 }
 .hoverText {
   opacity: 1;
@@ -242,10 +257,6 @@
 }
 
 /* LightTheme */
-
-.biographyLight:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
 
 .profileImageLight {
   box-shadow: 0.6vw 1.2vw rgba(0, 4, 255, 0.8);
@@ -270,7 +281,7 @@
 }
 
 .textAreaLight {
-  --b: 0.1vw;
+  --b: 0.25vw;
   --c: rgb(0, 0, 0);
   color: rgba(0, 137, 249, 0.01);
   padding-block: var(--b);
@@ -296,16 +307,13 @@
   box-shadow: 0.5vw 1vw rgba(0, 0, 255, 0.614);
   background-color: rgba(0, 0, 0, 0.304);
 }
-.textAreaLight:hover .p1Light {
-  background-color: transparent;
-}
-.textAreaLight:hover .p2Light {
-  background-color: transparent;
-}
-.textAreaLight:hover .p3Light {
-  background-color: transparent;
-}
+
+.textAreaLight:hover .p1Light,
+.textAreaLight:hover .p2Light,
+.textAreaLight:hover .p3Light,
 .textAreaLight:hover .p4Light {
+  transition: 3s color;
+  color: black;
   background-color: transparent;
 }
 .p1Light {
@@ -313,15 +321,22 @@
   align-self: flex-end;
   box-shadow: -0.3vw -0.5vw rgba(0, 0, 255, 0.614);
   transition: 1s ease;
+  height: 22vw;
+  width: 25vw;
+  position: relative;
 }
-.textAreaLight:hover .p1Light::before {
+
+.textAreaLight:hover .p1::before {
   content: "";
   background-color: white;
-  width: 27vw;
-  height: 24.5vw;
+  border: solid 0.2vw white;
   position: absolute;
-  top: 19vw;
-  left: 37vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
   z-index: -1;
 }
 .p1Light:hover {
@@ -329,19 +344,24 @@
   transition: 1s ease;
 }
 .p2Light {
-  height: 18.5vw;
   box-shadow: 0.3vw -0.5vw rgba(0, 0, 255, 0.614);
   transition: 1s ease;
+  width: 25vw;
+  height: 19vw;
   align-self: flex-end;
+  position: relative;
 }
 .textAreaLight:hover .p2Light::before {
   content: "";
   background-color: white;
-  width: 27vw;
-  height: 20.5vw;
+  border: solid 0.2vw white;
   position: absolute;
-  top: 23vw;
-  left: 66.5vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
   z-index: -1;
 }
 .p2Light:hover {
@@ -355,15 +375,20 @@
   justify-self: right;
   box-shadow: -0.3vw 0.5vw rgba(0, 0, 255, 0.614);
   transition: 1s ease;
+  position: relative;
 }
 .textAreaLight:hover .p3Light::before {
   content: "";
   background-color: white;
-  width: 21vw;
-  height: 15.5vw;
+  border: solid 0.2vw white;
+
   position: absolute;
-  top: 45.5vw;
-  left: 43vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
   z-index: -1;
 }
 
@@ -376,15 +401,20 @@
   height: 16vw;
   box-shadow: 0.3vw 0.5vw rgba(0, 0, 255, 0.614);
   transition: 1s ease;
+  position: relative;
 }
 .textAreaLight:hover .p4Light::before {
   content: "";
   background-color: white;
-  width: 23vw;
-  height: 18vw;
+  border: solid 0.2vw white;
+
   position: absolute;
-  top: 45.7vw;
-  left: 66.5vw;
+  height: 99%;
+  width: 99%;
+  top: 0;
+  left: 0;
+  justify-self: right;
+  align-self: flex-end;
   z-index: -1;
 }
 
@@ -448,18 +478,6 @@
     width: 24vw;
     height: 56vw;
     box-shadow: 1vw 1.5vw rgba(0, 0, 255, 0.614);
-  }
-  .textAreaLight:hover .p1Light::before,
-  .textAreaLight:hover .p2Light::before,
-  .textAreaLight:hover .p3Light::before,
-  .textAreaLight:hover .p4Light::before {
-    display: none;
-  }
-  .textAreaDark:hover .p1Dark::before,
-  .textAreaDark:hover .p2Dark::before,
-  .textAreaDark:hover .p3Dark::before,
-  .textAreaDark:hover .p4Dark::before {
-    display: none;
   }
 
   .profileImage {

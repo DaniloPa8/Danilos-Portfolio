@@ -30,7 +30,7 @@ body {
   border-right: 0.2vw solid white;
 }
 .leftSide {
-  font-size: 2vw;
+  font-size: 2.5vw;
   padding: 2vw;
   grid-column: 1;
   position: relative;
@@ -39,17 +39,19 @@ body {
 .leftSideDark {
   color: white;
 }
-.leftSide p {
+.leftSideDark p {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: 0.15em; /* Adjust as needed */
-  font-family: "Monoton", cursive;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  letter-spacing: 1vw; /* Adjust as needed */
+  font-family: "Quantico", sans-serif;
+  font-weight: 900;
+  animation: typing 3.5s steps(40, end),
+    blink-caret-dark 0.75s step-end infinite;
   cursor: default;
 }
 .leftSideDark p {
-  border-right: 0.11vw solid gold;
+  border-right: 0.11vw solid rgb(0, 255, 8);
 }
 
 .rightSide {
@@ -62,18 +64,19 @@ body {
 .continue {
   position: relative;
   background: transparent;
-  font-family: "Monoton", cursive;
-  width: 15vw;
-  height: 5vw;
-  font-size: 2vw;
-  border-radius: 5px;
+  font-family: "Quantico", sans-serif;
+  width: 17.5vw;
+  height: 7vw;
+  font-size: 3vw;
+  border-radius: 90vw;
   opacity: 0.5;
   margin: auto;
   transition: 1s;
-  animation: 3.5s ease-out 0s 1 slideInFromRight;
+  animation: 7s ease-out 0s 1 slideInFromRight;
+  text-align: center;
+  padding-top: 15%;
 }
 .continueDark {
-  border: 0.1px solid white;
   color: white;
 }
 .continue:hover {
@@ -81,11 +84,10 @@ body {
   opacity: 0.8;
   transition: 1s;
   transform: scale(1.1);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .continueDark:hover {
-  border: 0.3px solid gold;
-  color: gold;
+  color: rgb(0, 255, 8);
+  box-shadow: 0 8px 16px 0 rgba(0, 255, 8, 0.2);
 }
 
 /* LightTheme */
@@ -97,18 +99,35 @@ body {
   color: rgb(0, 0, 0);
 }
 .leftSideLight p {
-  border-right: 0.11vw solid rgb(0, 0, 0);
+  border-right: 0.11vw solid rgb(21, 0, 255);
   font-weight: 500;
+}
+.leftSideLight p {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 1vw; /* Adjust as needed */
+  font-family: "Quantico", sans-serif;
+  font-weight: 900;
+  animation: typing 3.5s steps(40, end),
+    blink-caret-white 0.75s step-end infinite;
+  cursor: default;
 }
 
 .continueLight {
-  border: 0.1px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0);
+  opacity: 1;
 }
 
 .continueLight:hover {
-  border: 0.3px solid rgb(21, 0, 255);
   color: rgb(21, 0, 255);
+  box-shadow: 0 8px 16px 0 rgba(21, 0, 255, 0.2);
+}
+.walkingMan {
+  animation: walk 10s ease-in-out infinite;
+  position: absolute;
+  top: -200%;
+  left: -10%;
 }
 
 /* The typing effect */
@@ -122,13 +141,13 @@ body {
 }
 
 /* The typewriter cursor effect */
-@keyframes blink-caret {
+@keyframes blink-caret-dark {
   from,
   to {
     border-color: transparent;
   }
   50% {
-    border-color: gold;
+    border-color: rgb(0, 255, 8);
   }
 }
 
@@ -138,7 +157,15 @@ body {
     border-color: transparent;
   }
   50% {
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(21, 0, 255);
+  }
+}
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1000%);
   }
 }
 
@@ -153,9 +180,11 @@ body {
 @keyframes slideInFromRight {
   0% {
     transform: translateX(220%);
+    opacity: 0;
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes slideInFromTop {
@@ -177,6 +206,13 @@ body {
     grid-template-columns: 5fr 1fr 5fr;
     grid-template-rows: 1fr;
     align-items: center;
+  }
+  .walkingMan {
+    animation: walkMobile 5s infinite ease-in-out;
+    height: 40vw;
+    position: absolute;
+    top: -130%;
+    left: -25%;
   }
   .leftSide {
     font-size: 3vw;
@@ -207,7 +243,21 @@ body {
     height: 10vw;
     width: 40vw;
   }
+  .continueDark {
+    border: 0.3vw solid white;
+  }
+  .continueLight {
+    border: 0.3vw solid black;
+  }
   body {
     overflow: hidden;
+  }
+  @keyframes walkMobile {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(500%);
+    }
   }
 }

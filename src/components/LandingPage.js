@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import App from "../App";
 import styles from "./../styles/LandingPage.module.css";
-
+import walkingMan from "./../images/walk.gif";
+import walkingManWhite from "./../images/walkLight.gif";
 const LandingPage = () => {
   const [loadedTheme, setLoadedTheme] = useState(
     localStorage.getItem("theme") === "true"
@@ -9,14 +10,20 @@ const LandingPage = () => {
 
   useEffect(() => {
     loadedTheme
-      ? (document.body.style.background = "radial-gradient(#939393, #c7c7c7)")
-      : (document.body.style.background = "radial-gradient(#000000, #1c1c1c)");
+      ? (document.body.style.background = "white")
+      : (document.body.style.background = "black");
   }, []);
 
   const [passLanding, setPassLanding] = useState(false);
   if (!passLanding)
     return (
       <div className={styles.container}>
+        {loadedTheme ? (
+          <img src={walkingManWhite} className={styles.walkingMan} />
+        ) : (
+          <img src={walkingMan} className={styles.walkingMan} />
+        )}
+
         <div
           className={`${styles.leftSide} ${
             loadedTheme ? styles.leftSideLight : styles.leftSideDark
@@ -32,14 +39,14 @@ const LandingPage = () => {
           .
         </div>
         <div className={styles.rightSide}>
-          <button
+          <div
             onClick={() => setPassLanding(true)}
             className={`${styles.continue} ${
               loadedTheme ? styles.continueLight : styles.continueDark
             }`}
           >
-            Continue
-          </button>
+            ENTER
+          </div>
         </div>
       </div>
     );

@@ -7,7 +7,7 @@
   opacity: 0;
 }
 .educationSlideIn {
-  animation: 2s ease-out 0s 1 slideInFromRight;
+  animation: 1.5s ease-out 0s 1 slideInFromRight;
   opacity: 1;
 }
 
@@ -22,11 +22,9 @@
 .spacerDark {
   border-top: 0.22vw groove white;
 }
-.educationDark:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
+
 .educationDark:hover > .title {
-  color: gold;
+  color: rgb(0, 255, 8);
 }
 .educationAnchor {
   position: relative;
@@ -36,7 +34,10 @@
   height: 15%;
   width: 60%;
   margin: auto;
-  padding: 1%;
+  padding: 1.5%;
+  text-align: justify;
+  text-align-last: center;
+
   border-top-right-radius: 0.4vw;
   border-bottom-left-radius: 0.4vw;
   transition: 1s;
@@ -49,7 +50,7 @@
   background-color: black;
 }
 .headingDark:hover {
-  box-shadow: 0.6vw 0.6vw gold;
+  box-shadow: 0.6vw 0.6vw rgb(0, 255, 8);
   transition: 1s;
 }
 .title {
@@ -82,9 +83,6 @@
 
 /* LightTheme */
 
-.educationLight:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
 .educationLight:hover > .titleLight {
   color: rgb(21, 0, 255);
 }
@@ -144,10 +142,7 @@
     border-right: 0.9vw solid white;
   }
   .headingDark:hover {
-    border-bottom: 1vw solid gold;
-    border-right: 1vw solid gold;
-    border-top: 0.3vw solid gold;
-    border-left: 0.3vw solid gold;
+    box-shadow: 1vw 1vw rgb(0, 255, 8);
   }
   .headingLight {
     border-top: 0.2vw solid rgb(0, 0, 0);
@@ -156,10 +151,7 @@
     border-right: 0.9vw solid rgb(0, 0, 0);
   }
   .headingLight:hover {
-    border-bottom: 1vw solid rgb(21, 0, 255);
-    border-right: 1vw solid rgb(21, 0, 255);
-    border-top: 0.3vw solid rgb(21, 0, 255);
-    border-left: 0.3vw solid rgb(21, 0, 255);
+    box-shadow: 1vw 1vw rgb(21, 0, 255);
   }
   .headingText {
     font-size: 2.5vw;

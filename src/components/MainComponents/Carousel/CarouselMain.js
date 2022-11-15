@@ -44,11 +44,15 @@ const CarouselMain = ({ data, theme }) => {
       <div className={styles.container}>
         <div className={styles.cardContainer}>
           <FaArrowAltCircleLeft
-            className={styles.leftArrow}
+            className={`${styles.leftArrow} ${
+              theme ? styles.leftArrowLight : styles.leftArrowDark
+            }`}
             onClick={moveLeft}
           />
           <FaArrowAltCircleRight
-            className={styles.rightArrow}
+            className={`${styles.rightArrow} ${
+              theme ? styles.rightArrowLight : styles.rightArrowDark
+            }`}
             onClick={moveRight}
           />
           {data.map((el, i) => {

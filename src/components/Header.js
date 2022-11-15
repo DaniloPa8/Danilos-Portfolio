@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const Header = ({ backToTop, theme, setBackToTop }) => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
   return (
     <div
       className={`${styles.header} ${
@@ -26,39 +25,53 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
         </p>
       </div>
       <div
-        className={styles.biography}
-        onClick={() => window.location.replace("/#top")}
+        className={`${styles.biography} ${
+          theme ? styles.biographyLight : styles.biographyDark
+        }`}
+        onClick={() => (window.location = "#biography")}
       >
         <p>Biography</p>
       </div>
       <div
-        className={styles.education}
-        onClick={() => window.location.replace("/#educationA")}
+        className={`${styles.education} ${
+          theme ? styles.educationLight : styles.educationDark
+        }`}
+        onClick={() => (window.location = "#educationA")}
       >
         <p>Education</p>
       </div>
       <div
-        className={styles.skills}
-        onClick={() => window.location.replace("/#skillsA")}
+        className={`${styles.skills} ${
+          theme ? styles.skillsLight : styles.skillsDark
+        }`}
+        onClick={() => (window.location = "#skillsA")}
       >
         <p>Skills</p>
       </div>
       <div
-        className={styles.projects}
-        onClick={() => window.location.replace("/#projectsA")}
+        className={`${styles.projects} ${
+          theme ? styles.projectsLight : styles.projectsDark
+        }`}
+        onClick={() => (window.location = "#projectsA")}
       >
         <p>Projects</p>
       </div>
       <div
-        className={styles.contact}
-        onClick={() => window.location.replace("/#contactA")}
+        className={`${styles.contact} ${
+          theme ? styles.contactLight : styles.contactDark
+        }`}
+        onClick={() => (window.location = "#contactA")}
       >
         <p>Contact</p>
       </div>
       {backToTop ? (
         <div
-          className={backToTop ? styles.backToTopAnimated : styles.backToTopNon}
-          onClick={() => (backToTop ? window.location.replace("/#top") : null)}
+          className={`${
+            backToTop ? styles.backToTopAnimated : styles.backToTopNon
+          } ${
+            theme ? styles.backToTopAnimatedLight : styles.backToTopAnimatedDark
+          }`}
+          onClick={() => (backToTop ? (window.location = "#top") : null)}
           onAnimationEnd={() => {
             if (!backToTop) setBackToTop(false);
           }}
@@ -71,7 +84,13 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
         </div>
       )}
       <div
-        className={hamburgerOpen ? styles.hamburgerOpen : styles.hamburgerDiv}
+        className={`${
+          hamburgerOpen
+            ? theme
+              ? styles.hamburgerOpenLight
+              : styles.hamburgerOpenDark
+            : styles.hamburgerDiv
+        }`}
         onClick={() => setHamburgerOpen((prev) => !prev)}
       >
         <GiHamburgerMenu />
@@ -97,7 +116,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
         >
           <li
             onClick={() => {
-              window.location.replace("/#top");
+              window.location = "#top";
               setTimeout(() => {
                 setHamburgerOpen(false);
               }, 500);
@@ -107,7 +126,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
           </li>
           <li
             onClick={() => {
-              window.location.replace("/#educationA");
+              window.location = "#educationA";
               setTimeout(() => {
                 setHamburgerOpen(false);
               }, 500);
@@ -117,7 +136,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
           </li>
           <li
             onClick={() => {
-              window.location.replace("/#skillsA");
+              window.location = "#skillsA";
               setTimeout(() => {
                 setHamburgerOpen(false);
               }, 500);
@@ -127,7 +146,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
           </li>
           <li
             onClick={() => {
-              window.location.replace("/#projectsA");
+              window.location = "#projectsA";
               setTimeout(() => {
                 setHamburgerOpen(false);
               }, 500);
@@ -137,7 +156,7 @@ const Header = ({ backToTop, theme, setBackToTop }) => {
           </li>
           <li
             onClick={() => {
-              window.location.replace("/#contactA");
+              window.location = "#contactA";
               setTimeout(() => {
                 setHamburgerOpen(false);
               }, 500);

@@ -1,16 +1,16 @@
 /* DarkTheme */
 .skills {
   height: auto;
-  margin-top: 20vw;
+  margin-top: 15vw;
   margin-bottom: 5vw;
   opacity: 0;
   transition: 1s background ease-in;
 }
 .skillsDark:hover > .title {
-  color: gold;
+  color: rgb(0, 255, 8);
 }
 .skillsSlideIn {
-  animation: 3.5s ease-out 0s 1 slideInFromLeft;
+  animation: 1.5s ease-out 0s 1 slideInFromLeft;
   opacity: 1;
 }
 
@@ -34,13 +34,12 @@
 .spacerDark {
   border-top: 0.22vw groove white;
 }
+
 .skillsAnchor {
   position: relative;
   bottom: 8vw;
 }
-.skills:hover {
-  background-color: rgba(0, 4, 255, 0.05);
-}
+
 .skillsAnchor {
   position: relative;
   top: -20%;
@@ -72,7 +71,7 @@
   background-color: black;
 }
 .headingDark:hover {
-  box-shadow: 0.6vw 0.6vw gold;
+  box-shadow: 0.6vw 0.6vw rgb(0, 255, 8);
   transition: 1s;
 }
 
@@ -95,7 +94,7 @@
 
 .iconContainerDark:hover {
   transition: 0.3s background ease-out;
-  background-color: rgb(21, 0, 211);
+  background-color: rgba(0, 255, 8, 0.3);
 }
 .icons {
   font-size: 4vw;
@@ -116,15 +115,17 @@
 }
 
 /* LightTheme */
+.skillsLight:hover .titleLight {
+  color: rgb(21, 0, 255);
+}
+
 .spacerLight {
   border-top: 0.22vw groove rgb(0, 0, 0);
 }
 .titleLight {
   color: black;
 }
-.skillsLight:hover > .title {
-  color: rgb(21, 0, 255);
-}
+
 .headingLight {
   border-top: 0.1vw solid rgb(0, 0, 0);
   border-left: 0.1vw solid rgb(0, 0, 0);
@@ -191,10 +192,7 @@
     border-right: 0.9vw solid white;
   }
   .headingDark:hover {
-    border-bottom: 1vw solid gold;
-    border-right: 1vw solid gold;
-    border-top: 0.3vw solid gold;
-    border-left: 0.3vw solid gold;
+    box-shadow: 1vw 1vw rgb(0, 255, 8);
   }
   .headingLight {
     border-top: 0.2vw solid rgb(0, 0, 0);
@@ -203,10 +201,7 @@
     border-right: 0.9vw solid rgb(0, 0, 0);
   }
   .headingLight:hover {
-    border-bottom: 1vw solid rgb(21, 0, 255);
-    border-right: 1vw solid rgb(21, 0, 255);
-    border-top: 0.3vw solid rgb(21, 0, 255);
-    border-left: 0.3vw solid rgb(21, 0, 255);
+    box-shadow: 1vw 1vw rgb(21, 0, 255);
   }
   .iconContainer {
     height: 14vw;
